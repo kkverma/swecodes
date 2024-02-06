@@ -1,3 +1,39 @@
 # About
 
-This is the about page! This page is shown on the navbar.
+import { Cards } from 'nextra/components';
+
+{<h1 className="mt-10 mb-4 text-center text-[2.5rem] font-bold tracking-tight">Coding Profiles</h1>}
+
+{<p className="mb-16 text-center text-lg text-gray-500 dark:text-gray-400">Checkout my coding profile's across platforms.</p>}
+<Cards>
+  <ShowcaseCard title="Go to Profile" href="https://leetcode.com/Kaushal121/">
+    <>![Leetcode](./assets/leetcode.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard title="Go to Profile" href="https://www.hackerearth.com/@kaushal121">
+    <>![Hackerearth](./assets/hackerearth.jpeg)</>
+  </ShowcaseCard>
+  <ShowcaseCard title="Go to Profile" href="https://www.codechef.com/users/verma123">
+    <>![CodeChef](./assets/codechef.png)</>
+  </ShowcaseCard>
+</Cards>
+
+
+export const ShowcaseCard = Object.assign(
+  // Copy card component and add default props
+  Cards.Card.bind(),
+  {
+    displayName: 'ShowcaseCard',
+    defaultProps: {
+      image: true,
+      arrow: true,
+      target: '_blank'
+    }
+  }
+)
+
+<style global jsx>{`
+  img {
+    aspect-ratio: 12/6.3;
+    object-fit: cover;
+  }
+`}</style>

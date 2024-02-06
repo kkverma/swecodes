@@ -3,8 +3,8 @@
   "another": "Another Page",
   "advanced": "Advanced (A Folder)",
   "about": {
-    "title": "About",
-    "type": "page"
+    "type": "page",
+    "title": "About"
   },
   "contact": {
     "title": "Contact ↗",
